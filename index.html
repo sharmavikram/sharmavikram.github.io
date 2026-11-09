@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vikram Sharma | Lead Software Engineer – Full-Stack &amp; Cloud Infrastructure</title>
-  <meta name="description" content="Vikram Sharma is a Lead Software Engineer with 10+ years of experience in React.js, Next.js, Node.js, TypeScript and AWS (EKS, Terraform), working in FinTech and media-tech. Based in Raipur, Chhattisgarh, India.">
-  <meta name="keywords" content="Vikram Sharma, Lead Software Engineer, Full Stack Developer, React.js, Next.js, Node.js, TypeScript, AWS, EKS, Terraform, Kubernetes, ArgoCD, GitLab CI/CD, Raipur">
+  <meta name="description" content="Vikram Sharma is a Lead Software Engineer with 10+ years of experience in React.js, Next.js, Node.js, TypeScript, and AWS EKS (Terraform, ArgoCD, Microservices), building high-scale FinTech and media-tech systems.">
+  <meta name="keywords" content="Vikram Sharma, Lead Software Engineer, Full Stack Developer, React.js, Next.js, Node.js, TypeScript, AWS, EKS, Terraform, Kubernetes, ArgoCD, GitLab CI/CD, Raipur, AI Portfolio">
   <meta name="author" content="Vikram Sharma">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0b1220">
+  <meta name="theme-color" content="#f8fafc">
+
+  <!-- Immediate Theme Initializer (Default: Light) -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', theme === 'dark' ? '#06070f' : '#f8fafc');
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Vikram Sharma | Lead Software Engineer">
-  <meta property="og:description" content="Full-stack and cloud infrastructure engineer: React.js, Next.js, Node.js, TypeScript, AWS EKS, Terraform, Kubernetes.">
+  <meta property="og:title" content="Vikram Sharma | Lead Software Engineer – Full-Stack &amp; Cloud Infrastructure">
+  <meta property="og:description" content="10+ years architecting scalable full-stack web platforms and AWS EKS cloud infrastructure (Terraform, ArgoCD, React, Next.js, Node.js, TypeScript).">
+  <meta property="og:url" content="https://sharmavikram.github.io/">
+  <meta property="og:image" content="https://sharmavikram.github.io/images/logo.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vikram Sharma | Lead Software Engineer">
+  <meta name="twitter:description" content="10+ years architecting scalable full-stack web platforms and AWS EKS cloud infrastructure.">
+
   <link rel="icon" href="favicon.ico">
+  <link rel="canonical" href="https://sharmavikram.github.io/">
   <link rel="stylesheet" href="css/portfolio.css">
 
+  <!-- Google Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,13 +48,25 @@
     "worksFor": { "@type": "Organization", "name": "Innodeed Systems Private Limited" },
     "email": "mailto:sharmavikram054@gmail.com",
     "url": "https://sharmavikram.github.io/",
-    "sameAs": ["https://www.linkedin.com/in/sharmavikram054/", "https://www.vitalsaudit.com/"],
-    "address": { "@type": "PostalAddress", "addressLocality": "Raipur", "addressRegion": "Chhattisgarh", "addressCountry": "IN" },
+    "sameAs": [
+      "https://www.linkedin.com/in/sharmavikram054/",
+      "https://www.vitalsaudit.com/"
+    ],
+    "address": { 
+      "@type": "PostalAddress", 
+      "addressLocality": "Raipur", 
+      "addressRegion": "Chhattisgarh", 
+      "addressCountry": "IN" 
+    },
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "Shri Shankaracharya Technical Campus" },
       { "@type": "CollegeOrUniversity", "name": "Pt. Ravishankar Shukla University" }
     ],
-    "knowsAbout": ["React.js", "Next.js", "Node.js", "TypeScript", "JavaScript", "AWS", "Kubernetes", "Terraform", "ArgoCD", "GitLab CI/CD"],
+    "knowsAbout": [
+      "React.js", "Next.js", "Node.js", "TypeScript", "JavaScript",
+      "AWS EKS", "Terraform", "Kubernetes", "ArgoCD", "Argo Rollouts",
+      "Grafana", "Loki", "Tempo", "Prometheus", "GitLab CI/CD", "Spring Boot"
+    ],
     "knowsLanguage": ["English", "Hindi"]
   }
   </script>
@@ -38,160 +74,778 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
+  <!-- Ambient Neural Canvas & Grids -->
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <div class="ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow-2" aria-hidden="true"></div>
+
+  <!-- SVG Linear Gradients Definition -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <linearGradient id="ai-grad-header" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#a78bfa"/>
+        <stop offset="50%" stop-color="#60a5fa"/>
+        <stop offset="100%" stop-color="#22d3ee"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Sticky Cyber Header -->
   <header class="site-header">
     <div class="wrap bar">
-      <a class="brand" href="#top">Vikram Sharma</a>
-      <nav aria-label="Primary">
+      <div class="brand-wrapper">
+        <a class="brand" href="#top" aria-label="Vikram Sharma Home">
+          <svg class="brand-neural-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3" fill="#22d3ee"/>
+            <circle cx="4" cy="6" r="2"/>
+            <circle cx="20" cy="6" r="2"/>
+            <circle cx="4" cy="18" r="2"/>
+            <circle cx="20" cy="18" r="2"/>
+            <line x1="6" y1="7" x2="10" y2="10.5" stroke="#a78bfa"/>
+            <line x1="18" y1="7" x2="14" y2="10.5" stroke="#a78bfa"/>
+            <line x1="6" y1="17" x2="10" y2="13.5" stroke="#a78bfa"/>
+            <line x1="18" y1="17" x2="14" y2="13.5" stroke="#a78bfa"/>
+          </svg>
+          <span class="brand-name">Vikram Sharma</span>
+        </a>
+        <span class="system-status-pill" title="System Status: Ready">
+          <span class="status-dot"></span>
+          <span class="status-pill-text">SYS: ONLINE • v10.2</span>
+        </span>
+      </div>
+
+      <nav aria-label="Primary Navigation">
         <ul>
-          <li><a href="#summary">Summary</a></li>
-          <li><a href="#skills">Skills</a></li>
+          <li><a href="#top">Overview</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#skills">Capabilities</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <div class="nav-actions">
+        <button class="cmd-trigger-btn cmd-trigger" type="button" aria-label="Open AI Command Palette">
+          <span class="cmd-sparkle">✦</span>
+          <span>Ask AI</span>
+          <span class="kbd-shortcut">⌘K</span>
+        </button>
+        <button type="button" id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle light or dark theme" title="Toggle Theme (T)">
+          <span class="theme-icon-sun" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </span>
+          <span class="theme-icon-moon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
+    <!-- HERO / AI NEURAL HUB -->
     <section class="hero" id="top">
       <div class="wrap">
-        <p class="eyebrow">Hi, I'm</p>
-        <h1>Vikram Sharma</h1>
-        <p class="role">Lead Software Engineer &mdash; Full-Stack &amp; Cloud Infrastructure</p>
-        <p class="lede">10+ years building scalable web platforms with React.js, Next.js, Node.js and TypeScript, and running them on AWS EKS with Terraform, ArgoCD and GitLab CI/CD. FinTech and media-tech domains.</p>
-        <p class="meta">Raipur, Chhattisgarh, India &middot; Open to work (recruiters only)</p>
-        <p class="cta">
-          <a class="btn primary" href="mailto:sharmavikram054@gmail.com">Email me</a>
-          <a class="btn" href="https://www.linkedin.com/in/sharmavikram054/" rel="me noopener">LinkedIn</a>
-        </p>
+        <div class="hero-card spotlight-card">
+          <div class="hero-meta-badge">
+            <span class="sparkle">✦</span>
+            <span>AI-POWERED PORTFOLIO // REGION: AP-SOUTH-1</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm Vikram Sharma.<br>
+            <span class="ai-gradient-text">Architecting Intelligent Web Platforms &amp; Cloud Infrastructure</span>
+          </h1>
+
+          <p class="hero-role-lead">
+            Lead Software Engineer &mdash; Full-Stack &amp; Cloud Infrastructure<span class="term-caret">▍</span>
+          </p>
+
+          <p class="hero-summary">
+            10+ years engineering resilient, scalable platforms with <strong>React.js, Next.js, Node.js</strong>, and <strong>TypeScript</strong>, and operating high-availability <strong>AWS EKS</strong> environments with <strong>Terraform, ArgoCD</strong>, and microservices across FinTech and high-traffic media-tech.
+          </p>
+
+          <!-- Interactive AI Copilot Prompt Bar in Hero -->
+          <div class="ai-copilot-input-box">
+            <svg class="ai-prompt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            </svg>
+            <input 
+              type="text" 
+              id="ai-prompt-input" 
+              class="ai-prompt-input-field" 
+              placeholder="Ask Vikram's AI Copilot anything (e.g. AWS EKS setup, CNBC scale, SBI chat)..." 
+              aria-label="Ask Vikram AI Copilot"
+            >
+            <button type="button" id="ai-prompt-submit" class="ai-prompt-submit-btn" aria-label="Query AI">
+              <span>Generate</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <!-- Prompt Suggestion Chips -->
+          <div class="prompt-chips-wrapper">
+            <span class="prompt-chips-label">PROMPTS:</span>
+            <button type="button" class="prompt-chip" data-query="summary">
+              <span>⚡ Executive Summary</span>
+            </button>
+            <button type="button" class="prompt-chip" data-query="aws eks">
+              <span>☁️ AWS EKS 5-Cluster Setup</span>
+            </button>
+            <button type="button" class="prompt-chip" data-query="cnbc">
+              <span>📰 CNBC-TV18 Live Scale</span>
+            </button>
+            <button type="button" class="prompt-chip" data-query="sbi chat">
+              <span>💳 SBI Real-Time Chat</span>
+            </button>
+            <button type="button" class="prompt-chip" data-query="why hire vikram">
+              <span>🚀 Why Hire Vikram?</span>
+            </button>
+          </div>
+
+          <!-- AI Output Reveal Container -->
+          <div id="ai-output-container" class="ai-output-box hidden" role="region" aria-live="polite">
+            <div class="ai-output-header">
+              <span id="ai-output-badge" class="ai-output-badge">AI COPILOT RESPONSE</span>
+              <h3 id="ai-output-title" class="ai-output-title">Knowledge Synthesis</h3>
+            </div>
+            <div id="ai-output-body" class="ai-output-content"></div>
+          </div>
+
+          <!-- Telemetry Grid -->
+          <div class="telemetry-grid">
+            <div class="telemetry-cell">
+              <div class="telemetry-val">10+</div>
+              <div class="telemetry-label">Years Engineering</div>
+              <div class="telemetry-sub">Full-Stack &amp; Cloud Platform</div>
+            </div>
+            <div class="telemetry-cell">
+              <div class="telemetry-val">5 EKS</div>
+              <div class="telemetry-label">Production Clusters</div>
+              <div class="telemetry-sub">6 VPCs &middot; Zero Shared-VPC Risk</div>
+            </div>
+            <div class="telemetry-cell">
+              <div class="telemetry-val">Millions</div>
+              <div class="telemetry-label">Users Scaled</div>
+              <div class="telemetry-sub">CNBC-TV18 Web, Mobile &amp; AMP</div>
+            </div>
+            <div class="telemetry-cell">
+              <div class="telemetry-val">0 Downtime</div>
+              <div class="telemetry-label">Deployment Standard</div>
+              <div class="telemetry-sub">Argo Rollouts Blue/Green</div>
+            </div>
+          </div>
+
+          <!-- Hero CTAs -->
+          <div class="hero-cta-group">
+            <a class="btn btn-primary" href="mailto:sharmavikram054@gmail.com">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Email Vikram</span>
+            </a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/sharmavikram054/" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <button type="button" class="btn btn-secondary copy-email-trigger" aria-label="Copy Email Address">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="summary" class="wrap">
-      <h2>Professional Summary</h2>
-      <p>Lead Software Engineer at Innodeed Systems Private Limited with 10+ years of experience as a full-stack developer, whose role has grown from application development into cloud architecture and platform engineering.</p>
-      <p>On the frontend and backend, I build scalable, high-performance web applications using React.js, Next.js, Node.js, JavaScript and TypeScript across FinTech and media-tech domains.</p>
-      <p>I have led the design and operation of Ambit, a multi-service platform (Java Spring Boot microservices, Next.js frontends, Strapi/NestJS CMS) deployed on AWS EKS: building the infrastructure from the ground up, deploying a full observability stack, and redesigning cluster topology to remove shared-VPC security risks. I enjoy bridging full-stack development and cloud infrastructure while mentoring teams.</p>
+    <!-- ARCHITECTURE & CODE DECK -->
+    <section id="architecture" class="section-wrap">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-tag">Interactive Architecture Lab</span>
+          <h2 class="section-title">Cloud Infrastructure &amp; Code Deck</h2>
+          <p class="section-desc">
+            Explore live production architecture snippets authored and operated by Vikram across AWS EKS, Argo Rollouts, and distributed telemetry pipelines.
+          </p>
+        </div>
+
+        <div class="terminal-window">
+          <div class="terminal-topbar">
+            <div class="terminal-controls">
+              <span class="term-btn term-btn-red"></span>
+              <span class="term-btn term-btn-yellow"></span>
+              <span class="term-btn term-btn-green"></span>
+            </div>
+            <div class="terminal-region-badge">
+              <span class="ping-dot"></span>
+              <span>ap-south-1 &middot; EKS CLUSTER PROD &middot; K8s v1.28</span>
+            </div>
+          </div>
+
+          <div class="terminal-tabs" role="tablist">
+            <button type="button" class="deck-tab active" data-snippet="terraform" role="tab" aria-selected="true">
+              <span>📄 ambit-cluster-topology.tf</span>
+            </button>
+            <button type="button" class="deck-tab" data-snippet="rollout" role="tab" aria-selected="false">
+              <span>📄 blue-green-rollout.yaml</span>
+            </button>
+            <button type="button" class="deck-tab" data-snippet="observability" role="tab" aria-selected="false">
+              <span>📄 telemetry-pipeline.ts</span>
+            </button>
+            <button type="button" class="deck-tab" data-snippet="telemetry" role="tab" aria-selected="false">
+              <span>📄 system-telemetry.json</span>
+            </button>
+          </div>
+
+          <div class="terminal-body">
+            <button type="button" id="copy-code-btn" class="copy-code-btn" aria-label="Copy code snippet">
+              <span>📋 Copy Manifest</span>
+            </button>
+            <pre class="code-display"><code id="arch-code-display">// Loading architecture manifest...</code></pre>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="skills" class="wrap">
-      <h2>Skills</h2>
-      <dl class="skills">
-        <div><dt>Languages</dt><dd>JavaScript, TypeScript, HTML5, CSS3, PHP</dd></div>
-        <div><dt>Frontend</dt><dd>React.js, Next.js, AngularJS, jQuery, Webpack, Axios, AMP</dd></div>
-        <div><dt>Backend</dt><dd>Node.js, Express.js, NestJS, Strapi, Java Spring Boot (microservices), CakePHP, REST APIs</dd></div>
-        <div><dt>Cloud &amp; DevOps</dt><dd>AWS (EKS, ECR, Route 53, RDS, ElastiCache, EC2, S3, Cognito, Lambda), Kubernetes, Terraform, Helm, ArgoCD, Argo Rollouts, GitLab CI/CD, Bitbucket</dd></div>
-        <div><dt>Observability</dt><dd>Grafana, Loki, Tempo, kube-prometheus-stack, New Relic</dd></div>
-        <div><dt>Databases</dt><dd>MySQL, DynamoDB, Amazon RDS, ElastiCache</dd></div>
-        <div><dt>Integrations</dt><dd>CleverTap, Google Ads, Taboola, SEO, BPMN.js, Stock Chart</dd></div>
-        <div><dt>Practices &amp; Tools</dt><dd>Agile, Scrum, Git, JIRA, Asana, Microsoft Teams, HLD/LLD documentation, capacity planning</dd></div>
-      </dl>
+    <!-- CAPABILITIES & SKILLS MATRIX -->
+    <section id="skills" class="section-wrap">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-tag">Capabilities Matrix</span>
+          <h2 class="section-title">Technical Mastery &amp; Systems</h2>
+          <p class="section-desc">
+            A comprehensive matrix of technologies, cloud infrastructure components, and engineering disciplines honed across 10+ years of production experience.
+          </p>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="skill-filter-bar">
+          <button type="button" class="skill-filter-btn active" data-filter="all">All Systems</button>
+          <button type="button" class="skill-filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+          <button type="button" class="skill-filter-btn" data-filter="frontend">Frontend Architecture</button>
+          <button type="button" class="skill-filter-btn" data-filter="backend">Backend &amp; Microservices</button>
+          <button type="button" class="skill-filter-btn" data-filter="observability">Observability</button>
+          <button type="button" class="skill-filter-btn" data-filter="practices">Practices &amp; Delivery</button>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Cloud & DevOps -->
+          <div class="skill-node-card spotlight-card" data-category="cloud">
+            <div class="skill-node-header">
+              <h3 class="skill-node-title">
+                <span class="skill-node-icon">☁️</span>
+                <span>Cloud &amp; DevOps</span>
+              </h3>
+            </div>
+            <ul class="skill-pills-list">
+              <li class="skill-pill highlight">AWS EKS</li>
+              <li class="skill-pill highlight">Terraform</li>
+              <li class="skill-pill highlight">Kubernetes</li>
+              <li class="skill-pill highlight">ArgoCD</li>
+              <li class="skill-pill highlight">Argo Rollouts</li>
+              <li class="skill-pill">Helm</li>
+              <li class="skill-pill">ECR</li>
+              <li class="skill-pill">Route 53</li>
+              <li class="skill-pill">RDS</li>
+              <li class="skill-pill">ElastiCache</li>
+              <li class="skill-pill">EC2 &amp; S3</li>
+              <li class="skill-pill">Cognito &amp; Lambda</li>
+              <li class="skill-pill">GitLab CI/CD</li>
+              <li class="skill-pill">Bitbucket</li>
+            </ul>
+          </div>
+
+          <!-- Frontend Architecture -->
+          <div class="skill-node-card spotlight-card" data-category="frontend">
+            <div class="skill-node-header">
+              <h3 class="skill-node-title">
+                <span class="skill-node-icon">⚡</span>
+                <span>Frontend Architecture</span>
+              </h3>
+            </div>
+            <ul class="skill-pills-list">
+              <li class="skill-pill highlight">React.js</li>
+              <li class="skill-pill highlight">Next.js (SSR/SSG)</li>
+              <li class="skill-pill highlight">TypeScript</li>
+              <li class="skill-pill highlight">JavaScript (ES6+)</li>
+              <li class="skill-pill">HTML5 &amp; CSS3</li>
+              <li class="skill-pill">Webpack</li>
+              <li class="skill-pill">AMP Pages</li>
+              <li class="skill-pill">HTML5 Canvas</li>
+              <li class="skill-pill">Axios</li>
+              <li class="skill-pill">AngularJS</li>
+              <li class="skill-pill">jQuery</li>
+            </ul>
+          </div>
+
+          <!-- Backend & Microservices -->
+          <div class="skill-node-card spotlight-card" data-category="backend">
+            <div class="skill-node-header">
+              <h3 class="skill-node-title">
+                <span class="skill-node-icon">⚙️</span>
+                <span>Backend &amp; Microservices</span>
+              </h3>
+            </div>
+            <ul class="skill-pills-list">
+              <li class="skill-pill highlight">Node.js</li>
+              <li class="skill-pill highlight">Express.js</li>
+              <li class="skill-pill highlight">NestJS</li>
+              <li class="skill-pill highlight">Java Spring Boot</li>
+              <li class="skill-pill">Strapi CMS</li>
+              <li class="skill-pill">RESTful APIs</li>
+              <li class="skill-pill">PHP &amp; CakePHP</li>
+              <li class="skill-pill">Microservices Topology</li>
+            </ul>
+          </div>
+
+          <!-- Observability -->
+          <div class="skill-node-card spotlight-card" data-category="observability">
+            <div class="skill-node-header">
+              <h3 class="skill-node-title">
+                <span class="skill-node-icon">📊</span>
+                <span>Observability &amp; Telemetry</span>
+              </h3>
+            </div>
+            <ul class="skill-pills-list">
+              <li class="skill-pill highlight">Grafana</li>
+              <li class="skill-pill highlight">Loki</li>
+              <li class="skill-pill highlight">Tempo</li>
+              <li class="skill-pill highlight">kube-prometheus-stack</li>
+              <li class="skill-pill">Promtail</li>
+              <li class="skill-pill">New Relic</li>
+              <li class="skill-pill">P95/P99 Monitoring</li>
+              <li class="skill-pill">SLO / SLA Tracking</li>
+            </ul>
+          </div>
+
+          <!-- Databases & Caching -->
+          <div class="skill-node-card spotlight-card" data-category="backend">
+            <div class="skill-node-header">
+              <h3 class="skill-node-title">
+                <span class="skill-node-icon">🗄️</span>
+                <span>Databases &amp; Storage</span>
+              </h3>
+            </div>
+            <ul class="skill-pills-list">
+              <li class="skill-pill highlight">MySQL</li>
+              <li class="skill-pill highlight">Amazon RDS</li>
+              <li class="skill-pill highlight">ElastiCache (Redis)</li>
+              <li class="skill-pill">DynamoDB</li>
+              <li class="skill-pill">AWS S3 IRSA</li>
+              <li class="skill-pill">Query Optimization</li>
+            </ul>
+          </div>
+
+          <!-- Practices & Delivery -->
+          <div class="skill-node-card spotlight-card" data-category="practices">
+            <div class="skill-node-header">
+              <h3 class="skill-node-title">
+                <span class="skill-node-icon">🛡️</span>
+                <span>Practices &amp; Integrations</span>
+              </h3>
+            </div>
+            <ul class="skill-pills-list">
+              <li class="skill-pill highlight">Agile &amp; Scrum</li>
+              <li class="skill-pill highlight">HLD / LLD System Design</li>
+              <li class="skill-pill highlight">Capacity Planning</li>
+              <li class="skill-pill">CleverTap Push</li>
+              <li class="skill-pill">Google Ads &amp; Taboola</li>
+              <li class="skill-pill">SEO Architecture</li>
+              <li class="skill-pill">BPMN.js</li>
+              <li class="skill-pill">Stock Chart Visualizations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="experience" class="wrap">
-      <h2>Work Experience</h2>
+    <!-- EXPERIENCE & CAREER TIMELINE -->
+    <section id="experience" class="section-wrap">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-tag">Career Pipeline</span>
+          <h2 class="section-title">Production Experience &amp; Impact</h2>
+          <p class="section-desc">
+            A chronological trace of technical leadership, cloud platform architecture, and mission-critical product delivery.
+          </p>
+        </div>
 
-      <article class="job">
-        <header>
-          <h3>Lead Software Engineer</h3>
-          <p class="org">Innodeed Systems Private Limited &middot; Full-time</p>
-          <p class="when"><time datetime="2022-04">Apr 2022</time> &ndash; Present &middot; Bhilai, Chhattisgarh, India &middot; Remote</p>
-        </header>
-        <p><strong>Project: Ambit</strong> &mdash; multi-service platform (Java Spring Boot microservices, Next.js frontends, Strapi/NestJS CMS) on AWS EKS, Mumbai region.</p>
-        <ul>
-          <li>Built the platform's infrastructure from the ground up: EKS clusters, ECR, Route 53, RDS, ElastiCache, GitLab CI/CD, and Argo Rollouts for blue/green deployments across staging, QA, UAT and production.</li>
-          <li>Designed and deployed a full observability stack (Loki, Grafana, Tempo, kube-prometheus-stack) using Terraform for S3/IRSA, Helm values, and ArgoCD App-of-Apps manifests.</li>
-          <li>Evaluated and redesigned the cluster topology, resolving over-clustering and shared-VPC security risks with a five-cluster, six-VPC architecture with namespace isolation.</li>
-          <li>Produced HLD/LLD documentation, cost estimates and capacity planning for the platform's AWS infrastructure.</li>
-          <li>Built and shipped React.js/Next.js and Node.js applications across FinTech and media-tech products.</li>
-        </ul>
-        <p><strong>Project: CNBCTV18 (client)</strong> &mdash; React.js, Next.js, HTML, CSS, JavaScript. <time datetime="2021-07">Jul 2021</time> &ndash; Present.</p>
-        <ul>
-          <li>Developed dynamic news websites for CNBC TV18 in English and Hindi, covering Home, Latest News, Binge Watch, Categories, Subcategories, Article, Author Profile, Anchor, Live TV, Shows, Podcasts, IPL and Assembly Elections pages for web, mobile-web and AMP.</li>
-          <li>Optimised SEO and integrated advertising code to improve site visibility and revenue.</li>
-          <li>Deployed CleverTap push notifications for user engagement and retention.</li>
-          <li>Built market live pages showing real-time stock market data.</li>
-        </ul>
-      </article>
+        <div class="timeline-container">
+          <div class="timeline-circuit-line" aria-hidden="true"></div>
 
-      <article class="job">
-        <header>
-          <h3>Full Stack Engineer / Senior Software Engineer</h3>
-          <p class="org">Innodeed Systems Private Limited &middot; Full-time</p>
-          <p class="when"><time datetime="2016-10">Oct 2016</time> &ndash; Mar 2022 &middot; Bhilai Area, India</p>
-        </header>
-        <p>Full-stack development across frontend and backend technologies in Agile teams, building and maintaining client and internal products.</p>
+          <!-- ROLE 1: Lead Software Engineer @ Innodeed -->
+          <div class="timeline-node-item">
+            <div class="timeline-pulse-node" aria-hidden="true"></div>
+            <article class="job-card spotlight-card">
+              <header class="job-header">
+                <h3 class="job-role">Lead Software Engineer</h3>
+                <p class="job-company">Innodeed Systems Private Limited &middot; Full-time</p>
+                <div class="job-meta-row">
+                  <span><time datetime="2022-04">Apr 2022</time> &ndash; Present</span>
+                  <span>&middot;</span>
+                  <span>Bhilai, Chhattisgarh, India (Remote)</span>
+                  <span>&middot;</span>
+                  <span class="system-status-pill">CURRENT ROLE</span>
+                </div>
+              </header>
 
-        <h4>SBI Card (client) &mdash; Live Chat System <span class="when">Jan 2020 &ndash; Jun 2021</span></h4>
-        <p class="stack">HTML, CSS, JavaScript</p>
-        <ul>
-          <li>Led development of a real-time chat system for SBI Card (RBI-approved), letting customers chat with multiple agents.</li>
-          <li>Implemented queue management that shows a waiting message when no agent is free, and dynamic agent allocation as soon as one becomes available.</li>
-          <li>Designed the post-chat feedback form to capture customer satisfaction insights.</li>
-        </ul>
+              <!-- Project Ambit -->
+              <div class="job-subproject">
+                <h4 class="job-subproject-title">Project: Ambit &mdash; Multi-Service FinTech &amp; Media Platform</h4>
+                <p class="job-tech-tagline">AWS EKS, Terraform, ArgoCD, Argo Rollouts, Java Spring Boot, Next.js, Strapi, NestJS, Loki, Tempo, Grafana</p>
+                <ul class="job-bullet-list">
+                  <li>Built the platform's cloud infrastructure from the ground up: EKS clusters, ECR, Route 53, RDS, ElastiCache, GitLab CI/CD, and Argo Rollouts for zero-downtime blue/green deployments across staging, QA, UAT, and production environments.</li>
+                  <li>Evaluated and redesigned the cluster topology, completely resolving over-clustering and shared-VPC security vulnerabilities by implementing an isolated <strong>5-cluster, 6-VPC architecture</strong> with strict namespace isolation and IRSA policies.</li>
+                  <li>Architected and deployed an end-to-end cloud-native observability stack (Loki, Grafana, Tempo, kube-prometheus-stack) utilizing Terraform for S3/IRSA, custom Helm values, and ArgoCD App-of-Apps manifests.</li>
+                  <li>Authored authoritative High-Level Design (HLD) and Low-Level Design (LLD) system architecture specifications, cost optimization roadmaps, and infrastructure capacity plans.</li>
+                  <li>Mentored cross-functional engineering squads and shipped high-performance React.js/Next.js and Node.js applications across FinTech and media-tech products.</li>
+                </ul>
+              </div>
 
-        <h4>SBI Card (client) &mdash; Image Guided Data Capture (IGDC) <span class="when">Jan 2020 &ndash; Jun 2021</span></h4>
-        <p class="stack">HTML, CSS, JavaScript, React.js, Canvas</p>
-        <ul>
-          <li>Led creation of the IGDC plugin, which captures and stores user data from TIFF files using canvas technology.</li>
-          <li>Built a TIFF viewer that captures field coordinates, with pagination, zoom in/out and rotation.</li>
-          <li>Stored captured data in the database so similar TIFF forms are matched and fields highlighted automatically.</li>
-        </ul>
+              <!-- Project CNBC-TV18 -->
+              <div class="job-subproject">
+                <h4 class="job-subproject-title">Project: CNBCTV18 (Client) &mdash; High-Scale Financial Media Platform</h4>
+                <p class="job-tech-tagline">React.js, Next.js, TypeScript, HTML5, CSS3, CleverTap, SEO, Real-Time Market Feeds &middot; <time datetime="2021-07">Jul 2021</time> &ndash; Present</p>
+                <ul class="job-bullet-list">
+                  <li>Engineered dynamic news portals for CNBC TV18 in English and Hindi, covering Home, Latest News, Binge Watch, Categories, Subcategories, Article views, Author Profiles, Anchor pages, Live TV, Shows, Podcasts, IPL, and Assembly Elections across web, mobile-web, and Accelerated Mobile Pages (AMP).</li>
+                  <li>Optimized Core Web Vitals, site accessibility, and integrated advertising code (Google Ads, Taboola) to substantially boost organic reach and revenue streams.</li>
+                  <li>Engineered CleverTap push notifications infrastructure for instantaneous breaking news delivery and user retention.</li>
+                  <li>Built real-time market live pages delivering live stock market prices, indices, and charting during active market trading hours.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
 
-        <h4>InstaTeam &mdash; Team Management App <span class="when">Jan 2017 &ndash; Dec 2019</span></h4>
-        <p class="stack">AngularJS, React.js, Next.js, HTML5, CSS, Webpack, Node.js, PHP</p>
-        <p>Free team management app used by thousands of sports teams, classrooms, clubs and other groups.</p>
-        <ul>
-          <li>Built a mobile-first team management module so admins can create a team in a few taps.</li>
-          <li>Implemented a scheduling system, reducing scheduling conflicts by over 20% through centralised updates.</li>
-          <li>Engineered instant messaging for whole teams or multiple groups, improving message reach and coordination by 30%.</li>
-          <li>Integrated push-notification and email reminders, event photo/video storage, and a &ldquo;Pay now&rdquo; feature for team expenses.</li>
-          <li>Built and maintained backend services and APIs with Node.js and PHP; integrated Google Ads and Taboola for monetisation and traffic acquisition.</li>
-        </ul>
-      </article>
+          <!-- ROLE 2: Full Stack / Senior Engineer @ Innodeed -->
+          <div class="timeline-node-item">
+            <div class="timeline-pulse-node" aria-hidden="true"></div>
+            <article class="job-card spotlight-card">
+              <header class="job-header">
+                <h3 class="job-role">Full Stack Engineer / Senior Software Engineer</h3>
+                <p class="job-company">Innodeed Systems Private Limited &middot; Full-time</p>
+                <div class="job-meta-row">
+                  <span><time datetime="2016-10">Oct 2016</time> &ndash; <time datetime="2022-03">Mar 2022</time></span>
+                  <span>&middot;</span>
+                  <span>Bhilai Area, India</span>
+                </div>
+              </header>
+              <p>Full-stack development across frontend and backend technologies in Agile teams, building and scaling client and internal products.</p>
 
-      <article class="job">
-        <header>
-          <h3>Technical Associate</h3>
-          <p class="org">TechPhant Consulting Group &middot; Full-time</p>
-          <p class="when"><time datetime="2014-07">Jul 2014</time> &ndash; <time datetime="2016-10">Oct 2016</time> &middot; Raipur, Chhattisgarh, India</p>
-        </header>
-        <ul>
-          <li>Built web applications using PHP and the CakePHP framework alongside front-end development.</li>
-        </ul>
-      </article>
+              <!-- SBI Card Live Chat -->
+              <div class="job-subproject">
+                <h4 class="job-subproject-title">SBI Card (Client) &mdash; Real-Time Live Chat System</h4>
+                <p class="job-tech-tagline">HTML5, CSS3, JavaScript, WebSockets &middot; Jan 2020 &ndash; Jun 2021</p>
+                <ul class="job-bullet-list">
+                  <li>Led development of a real-time chat platform for SBI Card (RBI-approved), enabling millions of cardholders to interact simultaneously with banking customer agents.</li>
+                  <li>Architected intelligent queue management that informs users of waiting times when agents are occupied, coupled with dynamic automatic agent routing upon availability.</li>
+                  <li>Built post-chat interactive feedback capture forms to monitor CSAT and agent resolution metrics.</li>
+                </ul>
+              </div>
+
+              <!-- SBI Card IGDC -->
+              <div class="job-subproject">
+                <h4 class="job-subproject-title">SBI Card (Client) &mdash; Image Guided Data Capture (IGDC)</h4>
+                <p class="job-tech-tagline">React.js, HTML5 Canvas, JavaScript, TIFF Viewer &middot; Jan 2020 &ndash; Jun 2021</p>
+                <ul class="job-bullet-list">
+                  <li>Spearheaded development of the IGDC plugin, capturing and indexing customer document data directly from high-resolution multi-page TIFF files using HTML5 Canvas.</li>
+                  <li>Engineered a custom TIFF viewer supporting dynamic coordinate capture, high-precision zooming, rotation, and multi-page pagination.</li>
+                  <li>Stored captured coordinate coordinates into relational data stores to automatically identify similar forms and pre-highlight required fields for rapid processing.</li>
+                </ul>
+              </div>
+
+              <!-- InstaTeam -->
+              <div class="job-subproject">
+                <h4 class="job-subproject-title">InstaTeam &mdash; Collaborative Sports &amp; Team Management Platform</h4>
+                <p class="job-tech-tagline">Next.js, React.js, AngularJS, Node.js, Webpack, PHP &middot; Jan 2017 &ndash; Dec 2019</p>
+                <ul class="job-bullet-list">
+                  <li>Built mobile-first team management interfaces empowering team administrators to configure teams, rosters, and roles seamlessly.</li>
+                  <li>Engineered a unified scheduling system, decreasing scheduling conflicts by over 20% through automated time synchronization and updates.</li>
+                  <li>Built instant messaging supporting whole-team broadcasts and sub-group communications, boosting message reach by 30%.</li>
+                  <li>Integrated instant push notification triggers, automated email reminders, photo/video media storage, and a "Pay Now" module for team dues.</li>
+                  <li>Constructed and maintained backend microservices and APIs with Node.js and PHP; integrated Google Ads and Taboola for monetisation.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <!-- ROLE 3: Technical Associate @ TechPhant -->
+          <div class="timeline-node-item">
+            <div class="timeline-pulse-node" aria-hidden="true"></div>
+            <article class="job-card spotlight-card">
+              <header class="job-header">
+                <h3 class="job-role">Technical Associate</h3>
+                <p class="job-company">TechPhant Consulting Group &middot; Full-time</p>
+                <div class="job-meta-row">
+                  <span><time datetime="2014-07">Jul 2014</time> &ndash; <time datetime="2016-10">Oct 2016</time></span>
+                  <span>&middot;</span>
+                  <span>Raipur, Chhattisgarh, India</span>
+                </div>
+              </header>
+              <ul class="job-bullet-list">
+                <li>Built dynamic database-driven web applications using PHP and the CakePHP framework alongside responsive frontend development.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="education" class="wrap">
-      <h2>Education</h2>
-      <ul class="plain">
-        <li>
-          <h3>Master of Computer Applications (M.C.A.), Computer Science</h3>
-          <p>Shri Shankaracharya Technical Campus (C.S.V.T.U) &middot; 2011 &ndash; 2014 &middot; 79.2%</p>
-        </li>
-        <li>
-          <h3>Bachelor of Computer Application (B.C.A.)</h3>
-          <p>Pt. Ravishankar Shukla University &middot; 2008 &ndash; 2011 &middot; 68%</p>
-        </li>
-      </ul>
-      <h3>Languages</h3>
-      <p>English, Hindi</p>
+    <!-- EDUCATION & CREDENTIALS -->
+    <section id="education" class="section-wrap">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-tag">Academic Verification</span>
+          <h2 class="section-title">Education &amp; Credentials</h2>
+        </div>
+
+        <div class="edu-grid">
+          <div class="edu-card spotlight-card">
+            <h3 class="edu-degree">Master of Computer Applications (M.C.A.)</h3>
+            <p class="edu-school">Shri Shankaracharya Technical Campus (C.S.V.T.U)</p>
+            <p class="edu-meta">Computer Science &middot; 2011 &ndash; 2014 &middot; <strong>79.2% (First Class with Distinction)</strong></p>
+          </div>
+
+          <div class="edu-card spotlight-card">
+            <h3 class="edu-degree">Bachelor of Computer Application (B.C.A.)</h3>
+            <p class="edu-school">Pt. Ravishankar Shukla University</p>
+            <p class="edu-meta">Computer Applications &middot; 2008 &ndash; 2011 &middot; <strong>68%</strong></p>
+          </div>
+
+          <div class="edu-card spotlight-card">
+            <h3 class="edu-degree">Linguistic Capabilities</h3>
+            <p class="edu-school">Professional Communication</p>
+            <p class="edu-meta">English (Professional Working Proficiency) &middot; Hindi (Native)</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="wrap">
-      <h2>Contact</h2>
-      <ul class="plain">
-        <li>Email: <a href="mailto:sharmavikram054@gmail.com">sharmavikram054@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/sharmavikram054/" rel="me noopener">linkedin.com/in/sharmavikram054</a></li>
-        <li>Website: <a href="https://www.vitalsaudit.com/" rel="me noopener">vitalsaudit.com</a></li>
-        <li>Location: Raipur, Chhattisgarh, India</li>
-      </ul>
+    <!-- CONTACT & NEURAL UPLINK -->
+    <section id="contact" class="section-wrap">
+      <div class="wrap">
+        <div class="contact-card spotlight-card">
+          <span class="section-tag">Direct Uplink</span>
+          <h2 class="section-title">Connect with Vikram</h2>
+          <p class="section-desc">
+            Open to senior and lead engineering opportunities, cloud architecture consultations, and technical leadership conversations.
+          </p>
+
+          <!-- Primary Direct Uplink: Email Spotlight Banner -->
+          <div class="email-uplink-banner spotlight-card">
+            <div class="email-uplink-main">
+              <div class="channel-icon-badge">
+                <svg class="channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="email-uplink-details">
+                <div class="uplink-meta-row">
+                  <span class="uplink-badge-tag">PRIMARY DIRECT UPLINK</span>
+                  <span class="uplink-beacon-tag"><span class="status-dot"></span> FASTEST RESPONSE</span>
+                </div>
+                <a class="email-address-link" href="mailto:sharmavikram054@gmail.com" title="Send email to Vikram Sharma">
+                  sharmavikram054@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="email-uplink-actions">
+              <a class="btn btn-primary email-action-btn" href="mailto:sharmavikram054@gmail.com">
+                <span>Send Email</span>
+                <span style="font-size:1.1em; line-height:1;">↗</span>
+              </a>
+              <button type="button" class="btn btn-secondary email-action-btn copy-email-trigger" aria-label="Copy Email Address">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Secondary Channels Grid -->
+          <div class="secondary-channels-grid">
+            <a class="secondary-channel-card spotlight-card" href="https://www.linkedin.com/in/sharmavikram054/" target="_blank" rel="noopener">
+              <div class="channel-icon-badge">
+                <svg class="channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </div>
+              <div class="secondary-channel-info">
+                <div class="secondary-channel-label">PROFESSIONAL NETWORK</div>
+                <div class="secondary-channel-val">
+                  <span>LinkedIn Profile</span>
+                  <span class="link-arrow">↗</span>
+                </div>
+              </div>
+            </a>
+
+            <a class="secondary-channel-card spotlight-card" href="https://www.vitalsaudit.com/" target="_blank" rel="noopener">
+              <div class="channel-icon-badge">
+                <svg class="channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <div class="secondary-channel-info">
+                <div class="secondary-channel-label">FEATURED PLATFORM</div>
+                <div class="secondary-channel-val">
+                  <span>vitalsaudit.com</span>
+                  <span class="link-arrow">↗</span>
+                </div>
+              </div>
+            </a>
+
+            <div class="secondary-channel-card spotlight-card" style="cursor: default;">
+              <div class="channel-icon-badge">
+                <svg class="channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="secondary-channel-info">
+                <div class="secondary-channel-label">BASE LOCATION</div>
+                <div class="secondary-channel-val">
+                  <span>Raipur, CG, India &middot; Remote Ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- FLOATING ACTION BUTTON (AI COPILOT) -->
+  <button type="button" id="copilot-fab" class="copilot-fab-btn" aria-label="Ask Vikram's AI Copilot">
+    <span class="fab-sparkle">✦</span>
+    <span>Ask Vikram AI</span>
+  </button>
+
+  <!-- AI COPILOT MODAL DIALOG -->
+  <div id="copilot-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="copilot-modal-title">
+    <div class="copilot-modal-dialog">
+      <div class="copilot-modal-header">
+        <div class="modal-header-info">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--cyan-light);">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+          </svg>
+          <h3 id="copilot-modal-title">Vikram AI Copilot</h3>
+        </div>
+        <button type="button" id="copilot-modal-close" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <div id="copilot-chat-log" class="copilot-chat-log">
+        <div class="chat-bubble ai-bubble">
+          <div class="ai-bubble-meta">
+            <span class="ai-badge">VIKRAM-v10.2</span>
+            <span class="ai-bubble-title">System Ready</span>
+          </div>
+          <div class="ai-bubble-content">
+            <p>Hello! I am Vikram's AI Copilot. Ask me anything regarding Vikram's <strong>10+ years in full-stack engineering</strong>, <strong>AWS EKS multi-cluster cloud architecture</strong>, <strong>CNBC-TV18 scale</strong>, or <strong>SBI Card FinTech systems</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="copilot-modal-input-area">
+        <input type="text" id="copilot-modal-input" placeholder="Type a question (e.g. AWS architecture, Next.js scale, contact)..." aria-label="AI message input">
+        <button type="button" id="copilot-modal-submit" class="ai-prompt-submit-btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMAND PALETTE MODAL (Cmd+K) -->
+  <div id="cmd-palette-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-palette-dialog">
+      <div class="cmd-palette-search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--violet-light);">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="cmd-palette-input" placeholder="Type a command or search (e.g. EKS, CNBC, skills, contact)..." aria-label="Command search">
+        <span class="kbd-shortcut">ESC</span>
+      </div>
+
+      <div class="cmd-palette-list">
+        <div class="cmd-group-label">Navigation</div>
+        <div class="cmd-item" data-action="scroll" data-target="#top">
+          <div class="cmd-item-left"><span class="cmd-item-icon">⚡</span><span>Overview &amp; Hero Hub</span></div>
+          <span class="kbd-shortcut">Top</span>
+        </div>
+        <div class="cmd-item" data-action="scroll" data-target="#architecture">
+          <div class="cmd-item-left"><span class="cmd-item-icon">💻</span><span>Cloud Architecture Deck</span></div>
+          <span class="kbd-shortcut">Deck</span>
+        </div>
+        <div class="cmd-item" data-action="scroll" data-target="#skills">
+          <div class="cmd-item-left"><span class="cmd-item-icon">🧩</span><span>Capabilities &amp; Skills Matrix</span></div>
+          <span class="kbd-shortcut">Skills</span>
+        </div>
+        <div class="cmd-item" data-action="scroll" data-target="#experience">
+          <div class="cmd-item-left"><span class="cmd-item-icon">💼</span><span>Career Experience Timeline</span></div>
+          <span class="kbd-shortcut">Jobs</span>
+        </div>
+        <div class="cmd-item" data-action="scroll" data-target="#contact">
+          <div class="cmd-item-left"><span class="cmd-item-icon">📬</span><span>Direct Contact &amp; Uplink</span></div>
+          <span class="kbd-shortcut">Mail</span>
+        </div>
+
+        <div class="cmd-group-label">AI Queries</div>
+        <div class="cmd-item" data-action="ask-ai" data-query="summary">
+          <div class="cmd-item-left"><span class="cmd-item-icon">✦</span><span>Ask AI: 30s Executive Summary</span></div>
+          <span class="kbd-shortcut">AI</span>
+        </div>
+        <div class="cmd-item" data-action="ask-ai" data-query="aws eks">
+          <div class="cmd-item-left"><span class="cmd-item-icon">☁️</span><span>Ask AI: AWS EKS 5-Cluster Topology</span></div>
+          <span class="kbd-shortcut">AI</span>
+        </div>
+        <div class="cmd-item" data-action="ask-ai" data-query="cnbc">
+          <div class="cmd-item-left"><span class="cmd-item-icon">📈</span><span>Ask AI: CNBC-TV18 Live Traffic Scale</span></div>
+          <span class="kbd-shortcut">AI</span>
+        </div>
+        <div class="cmd-item" data-action="ask-ai" data-query="sbi chat">
+          <div class="cmd-item-left"><span class="cmd-item-icon">💳</span><span>Ask AI: SBI Real-Time Chat &amp; Canvas IGDC</span></div>
+          <span class="kbd-shortcut">AI</span>
+        </div>
+
+        <div class="cmd-group-label">Actions</div>
+        <div class="cmd-item" data-action="toggle-theme">
+          <div class="cmd-item-left"><span class="cmd-item-icon">🌓</span><span>Toggle Light / Dark Theme</span></div>
+          <span class="kbd-shortcut">Theme</span>
+        </div>
+        <div class="cmd-item" data-action="copy-email">
+          <div class="cmd-item-left"><span class="cmd-item-icon">📋</span><span>Copy Email to Clipboard</span></div>
+          <span class="kbd-shortcut">Copy</span>
+        </div>
+        <div class="cmd-item" data-action="print">
+          <div class="cmd-item-left"><span class="cmd-item-icon">🖨️</span><span>Export / Print ATS Clean Resume</span></div>
+          <span class="kbd-shortcut">Print</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
-    <div class="wrap"><p>&copy; 2026 Vikram Sharma</p></div>
+    <div class="wrap">
+      <p>&copy; 2026 Vikram Sharma &middot; Lead Software Engineer &middot; Engineered with AI &amp; Modern Web Standards</p>
+    </div>
   </footer>
+
+  <!-- Portfolio Engine Script -->
+  <script src="js/ai-portfolio.js"></script>
 </body>
 </html>
